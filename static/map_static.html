@@ -1,0 +1,24 @@
+<html>
+  <head>
+      <title>Where Are You</title>
+  </head>
+
+  <body>
+      <h1>Display your location:</h1>
+      <p>
+        Your latitude is {{latitude}}, longitude is {{longitude}}.<br>
+        You are {{distance}}m away from Jiayan!<br>
+        {% if float(distance) > 30000%}
+          Your disance is too far away, may not be displayed no the map.<br>
+        {% else %}
+          Congralations! Not too far away from Jiayan, you should buy him a drink.<br>
+        {% end %}
+        <img src="{{map_img}}">
+      </p>
+      <h1>Powered by</h1>
+      <p>
+      <!--<img src="http://www.tornadoweb.org/en/stable/_images/tornado.png">-->
+        <img src="{{static_url("tornado.png")}}">
+      </p>
+  </body>
+</html>
